@@ -1,0 +1,33 @@
+.blog{
+    display: flex;
+    justify-content: space-around;
+    background: #F5F5F5;
+    height: 90PX;
+}
+.blog img{
+    background: #9ACD32;
+    padding: 10px;
+    border-radius: 50%;
+}
+.blog-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.blog-right h1{
+    font-size: 1.5rem;
+}
+.blog-right p{
+    font-size: .7rem;
+}
+.blog-left p{
+    font-size: 1rem;
+    font-size: 10px;
+}
+.blog-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
