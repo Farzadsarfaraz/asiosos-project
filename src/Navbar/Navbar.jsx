@@ -12,7 +12,7 @@ const Navbar = () => {
         <img src={logo} width="100px" />
         <ul className="navList">
           <li>HOME</li>
-          <li>News</li>
+          <li><Link to='news'>News</Link></li>
           <li>Unknown</li>
           <li>Voices</li>
           <li>Voices</li>
@@ -20,7 +20,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-icons">
-        <img src={wifi} width="20px"/>
+        <img src={wifi} width="20px" style={{rotate: "40deg"}} />
         <img src={python} width="20px" />
         <img src={apple} width="20px" />
       </div>
