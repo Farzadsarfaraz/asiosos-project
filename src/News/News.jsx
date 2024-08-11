@@ -29,7 +29,8 @@ const News = () => {
 
   return (
     <div className="new-wrapper">
-      <h1>Latest News</h1>
+      <div className="latest-news">
+      <h2>Latest News</h2>
       <div className="news-with-API">
         {news.map((item, index) => {
           return (
@@ -38,11 +39,12 @@ const News = () => {
               <img src={item.urlToImage} alt="Photo"/>
               </div>
               <span className="tec">Tec</span>
-              <h3>{item.title}</h3>
+              <h4>{item.title}</h4>
               <p>{item.description}</p>
             </div>
           );
         })}
+      </div>
       </div>
     </div>
   );

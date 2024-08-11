@@ -3,10 +3,13 @@
     flex-direction: column;
     align-items: center;
 }
+.new-wrapper h2{
+    margin-top: 20px;
+}
 .news-with-API{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 1000px;
+    gap: 15px;
 }
 .API-pp p{
     font-size: 13px;
