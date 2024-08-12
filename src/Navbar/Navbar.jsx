@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="wrapper-div">
       <div className="navbar-right">
-        <img src={logo} width="100px" />
+        <img src={logo} width="100px" onClick={()=>window.location.href ="https://www.asioso.com/en"} style={{cursor:"pointer"}} />
         <ul className="navList">
           <li>HOME</li>
           <li><Link to='news'>News</Link></li>

@@ -45,7 +45,6 @@ const News = () => {
               <h4>{item.title}</h4>
               <p>{item.description}</p>
               <p>{`Publiched At: ${item.publishedAt}`}</p>
-              <p>{`More...: ${item.url}`}</p>
             </div>
           );
         })}
