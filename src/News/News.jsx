@@ -8,13 +8,13 @@ const News = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-// https://newsapi.org/account
+// https://saurav.tech/NewsAPI/
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://newsapi.org/v2/everything?q=tesla&from=2024-07-11&sortBy=publishedAt&apiKey=88d7e405d776499d85be97e38517c5ed"
+          "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
         );
         setNews(response.data.articles);
         console.log(response.data.articles);
@@ -41,7 +41,7 @@ const News = () => {
               <div className="API-image">
               <img onClick={()=>window.location.href =`${item.url}`} src={item.urlToImage} style={{cursor:"pointer"}} alt="Photo"/>
               </div>
-              <span className="tec">Tec</span>
+              <span className="tec">{item.source.name}</span>
               <h4>{item.title}</h4>
               <p>{item.description}</p>
               <p>{`Publiched At: ${item.publishedAt}`}</p>
