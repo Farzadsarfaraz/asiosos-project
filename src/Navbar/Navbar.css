@@ -23,3 +23,18 @@
   gap: 15px;
   margin: 0px 35px;
 }
+.Navbar-news{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Navbar-news:hover{
+  cursor: pointer;
+}
+.Navbar-news img{
+  width: 15px;
+  height: 15px;
+}
+li{
+  color: white;
+}
