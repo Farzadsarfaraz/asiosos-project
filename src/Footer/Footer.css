@@ -4,4 +4,18 @@
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
+    padding: 55px;
+}
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-right img{
+    background: wheat;
+
+}
+.footer-left{
+    display: flex;
+    gap: 50px;
 }

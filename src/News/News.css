@@ -9,14 +9,14 @@
 .news-with-API{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 20px;
 }
 .API-pp p{
     font-size: 13px;
 }
 .API-pp{
-    width: 450px;
-    height: 300px;
+    width: 600px;
+    height: 460px;
     overflow-y:scroll;
     margin-top: 15px;
 }
@@ -29,6 +29,7 @@
 .API-image{
     width: 100%;
 }
+
 .tec{
     background: #9acd32;
     font-size: 12px;
