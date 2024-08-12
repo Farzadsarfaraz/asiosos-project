@@ -5,17 +5,54 @@
     display: flex;
     justify-content: space-around;
     padding: 55px;
+    position: relative;
 }
 .footer-right{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.footer-right img{
-    background: wheat;
+.footer-icons{
+    display: flex;
+    align-items: center;
+    padding: 15px 0px;
+    gap: 10px;
+}
+.footer-icons img{
+    background: rgb(158, 143, 114);
+    padding: 10px;
+    border-radius: 10px;
 
 }
 .footer-left{
     display: flex;
     gap: 50px;
+}
+.footer-input input{
+    padding: 15px;
+    width: 70%;
+}
+.footer-input button{
+    padding: 15px;
+    background: #9acd32;
+    margin-left: 2px;
+    width: 100px;
+    border: none;
+    color: white;
+}
+.popular-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.popular-categories ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.arrow-top{
+    position: absolute;
+    background:#9acd32;
+    right: 20px;
+    bottom: 20px;
 }
