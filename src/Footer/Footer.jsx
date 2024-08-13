@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Footer.css'
 import facebook from '../assets/facebook1.png'
 import twitter from '../assets/icons8-twitter-50.png'
@@ -8,6 +8,25 @@ import linkedln from '../assets/icons8-linkedin-2-50.png'
 import arrow_top from '../assets/icons8-up-squared-30.png'
 
 const Footer = () => {
+
+    const [error,setError]=useState(false)
+
+    const handleChnage =(val)=>{
+        if(val.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
+            setError(false)
+        }else{
+            setError(true)
+        }
+      }
+
+      const validEmail =()=>{
+        if(error == false){
+          setError('')
+        }else{
+          setError("Enter a valid email")
+        }
+      }
+
   return (
     <div className='footer'>
       <div className='footer-right'>
@@ -21,8 +40,11 @@ const Footer = () => {
         <img src={linkedln}  width="20px"/>
         </div>
         <div className='footer-input'>
-          <input placeholder='Enter your Email address'/>
-          <button>Submit</button>
+          <div>
+          <input placeholder='Enter your Email address' onChange={(e)=>handleChnage(e.target.value)}/>
+          <button onClick={validEmail}>Submit</button>
+          </div>
+          <p>{error}</p>
         </div>
       </div>
       <div className='footer-left'>
