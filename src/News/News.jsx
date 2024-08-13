@@ -7,7 +7,7 @@ const News = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [visibility, setVisibility] = useState(6);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -43,7 +43,8 @@ const News = () => {
   return (
     <div className="new-wrapper">
       <div className="latest-news">
-        <h2>Latest News</h2>
+      <h2>Latest News</h2>
+      </div>
         <div className="news-with-API">
           {news.slice(0, visibility).map((item, index) => (
             <div key={index} className="API-pp">
@@ -68,7 +69,6 @@ const News = () => {
         <button type="button" onClick={loadMore3}>3</button>
         <button type="button" onClick={next}>Next</button>
         </div>
-      </div>
     </div>
   );
 };

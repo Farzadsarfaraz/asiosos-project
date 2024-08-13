@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="navbar-right">
         <img src={logo} width="100px" onClick={()=>window.location.href ="https://www.asioso.com/en"} style={{cursor:"pointer"}} />
         <ul className="navList">
-        <Link to='home'><li>HOME</li></Link>
+        <Link to='/'><li>HOME</li></Link>
           <div className="Navbar-news">
           <Link to='news'><li>NEWS</li></Link>
           <img src={arrowDown} width="20px"/>
