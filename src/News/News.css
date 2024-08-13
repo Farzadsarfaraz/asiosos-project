@@ -2,15 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: red solid;
 }
 .latest-news {
-  border: blue solid;
   display: flex;
   width: 90%;
 }
 .News-buttons {
-  border: red solid;
   width: 90%;
 }
 
@@ -22,7 +19,6 @@
   flex-wrap: wrap;
   gap: 20px;
   width: 90%;
-  border: black solid;
 }
 .API-pp p {
   font-size: 13px;
@@ -32,7 +28,6 @@
   height: 360px;
   margin-top: 15px;
   overflow-x: hidden;
-  border: green solid;
 }
 .API-pp img {
   width: 100%;
@@ -64,4 +59,37 @@
 }
 .News-buttons button:hover {
   cursor: pointer;
+}
+@media(max-width: 1365px){
+    .API-pp{
+        width: 550px;
+    }
+}
+@media(max-width: 1260px){
+    .API-pp{
+        width: 500px;
+
+    }
+}
+@media(max-width: 1150px){
+    .API-pp{
+        width: 450px;
+
+    }
+}
+@media(max-width: 1040px){
+    .API-pp{
+        width: 400px;
+
+    }
+}
+@media(max-width: 930px){
+    .API-pp{
+        width: 350px;
+    }
+}
+@media(max-width: 852px){
+    .API-pp{
+        width: 90%;
+    }
 }
