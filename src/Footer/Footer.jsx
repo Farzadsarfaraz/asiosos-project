@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import facebook from '../assets/icons8-facebook-26.png'
+import facebook from '../assets/facebook1.png'
 import twitter from '../assets/icons8-twitter-50.png'
 import instagram from '../assets/icons8-instagram-100.png'
 import gmail from '../assets/icons8-google-plus-48.png'

@@ -19,10 +19,10 @@
     gap: 10px;
 }
 .footer-icons img{
-    background: rgb(158, 143, 114);
-    padding: 10px;
+    background: rgb(114, 109, 109);
+    padding: 2px;
+    border: none;
     border-radius: 10px;
-
 }
 .footer-left{
     display: flex;
@@ -30,7 +30,7 @@
 }
 .footer-input input{
     padding: 15px;
-    width: 70%;
+    width: 300px;
     border: none;
     outline: none;
 }
@@ -57,4 +57,85 @@
     background:#9acd32;
     right: 20px;
     bottom: 20px;
+}
+@media(max-width: 900px){
+    .footer-input input{
+        width: 250px;
+    }
+    .footer-input button{
+        padding: 15px;
+        background: #9acd32;
+        margin-left: 2px;
+        width: 90px;
+        border: none;
+        color: white;
+    }
+    .popular-categories ul li{
+        font-size: 15px;
+    }
+    .popular-categories h2{
+        font-size: 15px;
+    }
+}
+@media(max-width: 900px){
+    .footer-input input{
+        width: 200px;
+    }
+    .footer-input button{
+        padding: 12px;
+        width: 80px;
+    }
+    .popular-categories ul li{
+        font-size: 12px;
+    }
+    .popular-categories h2{
+        font-size: 12px;
+    }
+    .footer-input input{
+        padding: 12px;
+}
+.footer-right p{
+    font-size: 12px;
+}
+.footer-icons img{
+    padding: 4px;
+}
+}
+@media(max-width: 640px){
+    .footer-input input{
+        width: 150px;
+    }
+    .footer-input button{
+        width: 70px;
+    }
+    .popular-categories ul li{
+        font-size: 10px;
+    }
+    .popular-categories h2{
+        font-size: 10px;
+    }
+    .footer-input input{
+        padding: 12px;
+}
+.footer-right p{
+    font-size: 10px;
+}
+.footer-icons img{
+    padding: 3px;
+}
+}
+@media(max-width: 550px){
+    .footer{
+        flex-direction: column;
+    }
+    .footer-left{
+        margin-top: 20px;
+    }
+
+}
+@media(max-width: 360px){
+    .footer-input input{
+        width: 100px;
+    }
+
 }
