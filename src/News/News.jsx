@@ -7,6 +7,7 @@ const News = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [visibility, setVisibility] = useState(6);
+  const [nonVisibility, setNonVisibility] = useState(0);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -28,47 +29,73 @@ const News = () => {
   if (error) return <div>Error: {error.message}. Please try again later.</div>;
 
   const loadMore = () => {
-    setVisibility((prev) => prev + 2);
+    setVisibility(6);
+    setNonVisibility(0);
   };
+
   const loadMore2 = () => {
-    setVisibility((prev) => prev + 4);
+    setVisibility(12);
+    setNonVisibility(6);
+    window.scrollTo(0, 0);
   };
+
   const loadMore3 = () => {
-    setVisibility((prev) => prev + 6);
+    setVisibility(18);
+    setNonVisibility(12);
+    window.scrollTo(0, 0);
   };
+
   const next = () => {
-    setVisibility((prev) => prev + 2);
+    const newNonVisibility = nonVisibility + 6;
+    const newVisibility = visibility + 6;
+
+    if (newVisibility >= news.length) {
+      setVisibility(news.length);
+      setNonVisibility(news.length - (news.length % 6) || news.length - 6);
+    } else {
+      setVisibility(newVisibility);
+      setNonVisibility(newNonVisibility);
+    }
+
+    window.scrollTo(0, 0);
   };
 
   return (
     <div className="new-wrapper">
       <div className="latest-news">
-      <h2>Latest News</h2>
+        <h2>Latest News</h2>
       </div>
-        <div className="news-with-API">
-          {news.slice(0, visibility).map((item, index) => (
-            <div key={index} className="API-pp">
-              <div className="API-image">
-                <img
-                  onClick={() => (window.location.href = `${item.url}`)}
-                  src={item.urlToImage}
-                  style={{ cursor: "pointer" }}
-                  alt="Photo"
-                />
-              </div>
-              <span className="tec">{item.source.name}</span>
-              <h4>{item.title}</h4>
-              <p>{item.description}</p>
-              <p>{`Published At: ${new Date(item.publishedAt).toLocaleString()}`}</p>
+      <div className="news-with-API">
+        {news.slice(nonVisibility, visibility).map((item, index) => (
+          <div key={index} className="API-pp">
+            <div className="API-image">
+              <img
+                onClick={() => (window.location.href = `${item.url}`)}
+                src={item.urlToImage}
+                style={{ cursor: "pointer" }}
+                alt="Photo"
+              />
             </div>
-          ))}
-        </div>
-        <div className="News-buttons">
+            <span className="tec">{item.source.name}</span>
+            <h4>{item.title}</h4>
+            <p>{item.description}</p>
+            <p>{`Published At: ${new Date(item.publishedAt).toLocaleString()}`}</p>
+          </div>
+        ))}
+      </div>
+      <div className="News-buttons">
         <button type="button" onClick={loadMore}>1</button>
         <button type="button" onClick={loadMore2}>2</button>
         <button type="button" onClick={loadMore3}>3</button>
-        <button type="button" onClick={next}>Next</button>
-        </div>
+        <button
+          type="button"
+          onClick={next}
+          disabled={visibility >= news.length}
+          style={{ display: visibility >= news.length ? "none" : "inline-block" }}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 };
