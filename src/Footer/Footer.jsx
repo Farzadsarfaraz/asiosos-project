@@ -53,13 +53,28 @@ const Footer = () => {
                 <div className='popular-categories'>
                     <h2>Popular Categories</h2>
                     <ul>
+                        <div className='footer-popular-list'>
                         <li>Marketing</li>
+                        <span>(21)</span>
+                        </div>
                         <hr />
+                        <div className='footer-popular-list'>
                         <li>SEO Services</li>
+                        <span>(21)</span>
+                        </div>
+                        <div className='footer-popular-list'>
                         <li>Digital Agency</li>
+                        <span>(21)</span>
+                        </div>
+                        <div className='footer-popular-list'>
                         <li>Make Money</li>
+                        <span>(21)</span>
+                        </div>
                         <hr />
+                        <div className='footer-popular-list'>
                         <li>Blogging</li>
+                        <span>(21)</span>
+                        </div>
                     </ul>
                 </div>
                 <div className='popular-categories'>

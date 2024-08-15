@@ -16,7 +16,7 @@ const Navbar = () => {
     e.target.classList.toggle("open");
   };
   const droparrow_toggle = () => {
-    Menuref1.current.classList.toggle("nav-menu-visible");
+    Menuref1.current.classList.toggle("nav-menu-visible1");
   };
   return (
     <div className="nav-container">

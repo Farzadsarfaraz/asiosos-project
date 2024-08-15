@@ -58,6 +58,10 @@
     right: 20px;
     bottom: 20px;
 }
+.footer-popular-list{
+    display: flex;
+    justify-content: space-between;
+}
 @media(max-width: 900px){
     .footer-input input{
         width: 250px;
@@ -73,6 +77,9 @@
     .popular-categories ul li{
         font-size: 15px;
     }
+    .footer-popular-list{
+        font-size: 15px;
+    }
     .popular-categories h2{
         font-size: 15px;
     }
@@ -86,6 +93,9 @@
         width: 80px;
     }
     .popular-categories ul li{
+        font-size: 12px;
+    }
+    .footer-popular-list{
         font-size: 12px;
     }
     .popular-categories h2{
@@ -109,6 +119,9 @@
         width: 70px;
     }
     .popular-categories ul li{
+        font-size: 10px;
+    }
+    .footer-popular-list{
         font-size: 10px;
     }
     .popular-categories h2{
