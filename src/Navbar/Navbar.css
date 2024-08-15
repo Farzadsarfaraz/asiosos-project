@@ -27,15 +27,28 @@
 }
 .Navbar-news{
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 .Navbar-news:hover{
   cursor: pointer;
 }
-.Navbar-news img{
-  width: 15px;
-  height: 15px;
+.nav-container nav{
+  display: flex;
+  justify-content:left;
+  align-items: center;
+  gap: 15px;
+}
+.nav-new-sub{
+  display: none;
+}
+.nav-new-sub li{
+  font-size: 13px;
+  padding: 10px;
+}
+.arrow-down{
+  width: 12px;
+  height: 12px;
   rotate: -90deg;
 }
 .nav-right li{
@@ -45,6 +58,14 @@
   display: none;
   margin: auto;
 }
+.nav-menu-visible{
+  display: flex;
+}
+.nav-dropdown.open{
+  rotate: 0deg;
+}
+
+
 @media(max-width: 860px){
   .navList li{
     font-size: 10px;
@@ -62,12 +83,6 @@
     rotate: -90deg;
     transition: 0.5s;
     cursor: pointer;
-  }
-  .nav-dropdown.open{
-    rotate: 0deg;
-  }
-  .nav-menu-visible{
-    display: flex;
   }
   .nav-right ul li{
     color: rgb(0, 0, 0);

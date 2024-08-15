@@ -31,6 +31,7 @@ const News = () => {
   const loadMore = () => {
     setVisibility(6);
     setNonVisibility(0);
+    window.scrollTo(0, 0);
   };
 
   const loadMore2 = () => {
@@ -51,7 +52,7 @@ const News = () => {
 
     if (newVisibility >= news.length) {
       setVisibility(news.length);
-      setNonVisibility(news.length - (news.length % 6) || news.length - 6);
+      setNonVisibility(news.length - 6);
     } else {
       setVisibility(newVisibility);
       setNonVisibility(newNonVisibility);
