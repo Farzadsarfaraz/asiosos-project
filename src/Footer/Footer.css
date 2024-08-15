@@ -87,6 +87,7 @@
 @media(max-width: 900px){
     .footer-input input{
         width: 200px;
+        padding: 12px;
     }
     .footer-input button{
         padding: 12px;
@@ -101,9 +102,6 @@
     .popular-categories h2{
         font-size: 12px;
     }
-    .footer-input input{
-        padding: 12px;
-}
 .footer-right p{
     font-size: 12px;
 }
@@ -127,9 +125,6 @@
     .popular-categories h2{
         font-size: 10px;
     }
-    .footer-input input{
-        padding: 12px;
-}
 .footer-right p{
     font-size: 10px;
 }
