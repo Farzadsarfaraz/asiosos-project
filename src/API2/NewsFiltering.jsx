@@ -8,8 +8,6 @@ const NewsFiltering = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [visibility, setVisibility] = useState(6);
-  const [nonVisibility, setNonVisibility] = useState(0);
   const params = useParams()
 
   

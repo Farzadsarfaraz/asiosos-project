@@ -19,6 +19,9 @@ const Footer = () => {
     const validEmail = () => {
         if (error) {
             setError("Enter a valid email");
+        }else{
+            setError("Submitted")
+            setEmail('')
         }
     };
 
