@@ -73,6 +73,7 @@ const Navbar = () => {
         <li><Link to="newsFiltering/business">business</Link></li>
         <li><Link to="newsFiltering/entertainment">entertainment</Link></li>
       </ul>
+      <hr/>
     </div>
   );
 };

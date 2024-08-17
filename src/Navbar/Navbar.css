@@ -44,6 +44,7 @@
   display: none;
   justify-content: center;
   align-items: center;
+  background: #f5f5f5;
 }
 .nav-new-sub li{
   font-size: 15px;
