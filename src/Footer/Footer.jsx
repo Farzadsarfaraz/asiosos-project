@@ -8,7 +8,6 @@ import gmail from '../assets/icons8-google-plus-48.png';
 import linkedln from '../assets/icons8-linkedin-2-50.png';
 import arrow_top from '../assets/icons8-up-squared-30.png';
 
-// Define the validation schema
 const emailSchema = yup.object().shape({
     email: yup.string().email('Enter a valid email').required('Email is required'),
 });
@@ -19,7 +18,7 @@ const Footer = () => {
 
     const handleChange = (val) => {
         setEmail(val);
-        setError(''); // Clear the error when user starts typing
+        setError('');
     };
 
     const validEmail = () => {
@@ -27,10 +26,10 @@ const Footer = () => {
             .validate({ email })
             .then(() => {
                 setError('Submitted');
-                setEmail(''); // Clear the email input after successful submission
+                setEmail('');
             })
             .catch((err) => {
-                setError(err.message); // Set the validation error message
+                setError(err.message);
             });
             setTimeout(()=>{
                 setError('')
