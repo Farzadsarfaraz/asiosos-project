@@ -13,7 +13,7 @@ const News = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
+          "https://saurav.tech/NewsAPI/everything/cnn.json"
         );
         setNews(response.data.articles);
       } catch (err) {
@@ -60,6 +60,8 @@ const News = () => {
 
     window.scrollTo(0, 0);
   };
+  console.log(visibility)
+  console.log(nonVisibility)
 
   return (
     <div className="new-wrapper">
@@ -81,6 +83,7 @@ const News = () => {
             <h4>{item.title}</h4>
             <p>{item.description}</p>
             <p>{`Published At: ${new Date(item.publishedAt).toLocaleString()}`}</p>
+            <p>{item.url}</p>
           </div>
         ))}
       </div>

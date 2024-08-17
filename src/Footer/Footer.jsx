@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import * as yup from 'yup';
 import './Footer.css';
 import facebook from '../assets/facebook1.png';
 import twitter from '../assets/icons8-twitter-50.png';
@@ -7,22 +8,33 @@ import gmail from '../assets/icons8-google-plus-48.png';
 import linkedln from '../assets/icons8-linkedin-2-50.png';
 import arrow_top from '../assets/icons8-up-squared-30.png';
 
+// Define the validation schema
+const emailSchema = yup.object().shape({
+    email: yup.string().email('Enter a valid email').required('Email is required'),
+});
+
 const Footer = () => {
     const [email, setEmail] = useState('');
-    const [error, setError] = useState(false);
+    const [error, setError] = useState('');
 
     const handleChange = (val) => {
         setEmail(val);
-        setError(!val.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/));
+        setError(''); // Clear the error when user starts typing
     };
 
     const validEmail = () => {
-        if (error) {
-            setError("Enter a valid email");
-        }else{
-            setError("Submitted")
-            setEmail('')
-        }
+        emailSchema
+            .validate({ email })
+            .then(() => {
+                setError('Submitted');
+                setEmail(''); // Clear the email input after successful submission
+            })
+            .catch((err) => {
+                setError(err.message); // Set the validation error message
+            });
+            setTimeout(()=>{
+                setError('')
+            }, 5000)
     };
 
     return (

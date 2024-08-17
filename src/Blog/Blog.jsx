@@ -8,7 +8,7 @@ export const Blog = () => {
       <div className="blog-right">
         <img src={share} width="10px" />
         <h1>Blog</h1>
-        <p>Lorem ipsum dotinctio quasi excepturi velit amet. Quis, non!</p>
+        <p>Lorem ipsum dotinctio quasi excepturi velit amet.</p>
       </div>
       <div className="blog-left">
         <p>Home / blog</p>

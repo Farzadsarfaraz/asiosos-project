@@ -42,6 +42,8 @@
 }
 .nav-new-sub{
   display: none;
+  justify-content: center;
+  align-items: center;
 }
 .nav-new-sub li{
   font-size: 15px;
@@ -54,7 +56,11 @@
 .arrow-down{
   width: 12px;
   height: 12px;
-  rotate: -90deg;
+  margin-left: 3px;
+  transition: .5s;
+}
+.arrow-down.down{
+  rotate: 0deg;
 }
 .nav-right li{
   color: white;
@@ -65,6 +71,11 @@
 }
 
 @media(max-width: 860px){
+  .nav-container{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
   .navList li{
     font-size: 10px;
   }
@@ -95,6 +106,11 @@
   }
   .nav-menu-visible{
     display: flex;
+  }
+  .nav-new-sub li{
+    font-size: 10px;
+    padding: 10px;
+    color: black;
   }
 
 }

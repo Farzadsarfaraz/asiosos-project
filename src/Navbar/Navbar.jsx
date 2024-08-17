@@ -6,9 +6,12 @@ import apple from "../assets/apple.png";
 import python from "../assets/python.png";
 import arrowDown from "../assets/arrowDown.png";
 import arrow_down from "../assets/arrow-down.png";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const Navbar = () => {
+
+  const[rotating, setRotating] = useState(false);
+
   const Menuref = useRef();
   const Menuref1 = useRef();
   const dropdown_toggle = (e) => {
@@ -16,6 +19,7 @@ const Navbar = () => {
     e.target.classList.toggle("open");
   };
   const droparrow_toggle = () => {
+    setRotating(!rotating);
     Menuref1.current.classList.toggle("nav-menu-visible1");
   };
   return (
@@ -44,7 +48,7 @@ const Navbar = () => {
               <Link to="news">
                 <li onClick={droparrow_toggle}>NEWS</li>
               </Link>
-              <img src={arrowDown} width="14px" className="arrow-down"/>
+              <img src={arrowDown} width="14px" className="arrow-down" style={{ transform: rotating ? 'rotate(0deg)' : 'rotate(-90deg)' }}/>
             </div>
             <li>Unknown</li>
             <li>VIDEOS</li>
